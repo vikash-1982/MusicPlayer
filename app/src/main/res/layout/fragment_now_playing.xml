@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/coolred"
+    tools:context=".NowPlaying">
+<com.google.android.material.imageview.ShapeableImageView
+    android:id="@+id/songImageFM"
+    android:layout_width="70dp"
+    android:layout_height="50dp"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="5dp"
+    app:shapeAppearanceOverlay="@style/curved"
+    android:src="@drawable/splash_screen"/>
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/songNextFM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        app:icon="@drawable/ic_baseline_navigate_next_24"
+        app:iconSize="45dp"
+        android:backgroundTint="@color/coolred"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="10dp"/>
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/songPlayFM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_toStartOf="@id/songNextFM"
+        app:icon="@drawable/ic_baseline_play_arrow_24"
+        app:iconSize="45dp"
+        android:backgroundTint="@color/coolred"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="10dp"/>
+    <TextView
+        android:id="@+id/song_nameFM"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Song Name"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_toStartOf="@id/songPlayFM"
+        android:layout_toEndOf="@id/songImageFM"
+        android:textStyle="bold"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"/>
+
+</RelativeLayout>
